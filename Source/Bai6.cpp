@@ -1,10 +1,14 @@
 #include <stdio.h>
+#include <conio.h>
 #include <string.h>
  
 int main() 
 {
-    int i;
-	char s[50];
+    int i,max;
+    printf("nhap vao so luong phan tu nhap max = ");
+    scanf("%d",&max);
+	char s[max];
+	fflush(stdin);
     printf("nhap vao xau can chuan hoa: ");
     gets(s);
     // xóa dau cach cuoi 
@@ -36,7 +40,7 @@ int main()
 	//xóa 2 dau cham hoac phay lien nhau
 	for(i = 0; i < strlen(s); i++)
 	{
-		if ((s[i] == ',' || s[i]== '.') && (s[i+1] == ',' || s[i+1] == '.') )
+		if ((s[i] == ',' && s[i+1]== ',') || (s[i] == '.' && s[i+1] == '.') )
 	   {
  	     strcpy(&s[i],&s[i+1]);
 		 i--;
@@ -56,5 +60,6 @@ int main()
 	}
 	
     printf("Xau sau khi chuan hoa: %s\n", s);
+     getch();
     return 0;
 }

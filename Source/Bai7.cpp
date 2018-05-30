@@ -1,8 +1,10 @@
-
 #include <stdio.h>
 #include <conio.h>
 int UCLN(int a,int b)
 {
+	if(a==0 || b==0){
+	return a+b;	
+		}
 	while(a!=b){
 		if(a>b) a=a-b;
 		if(a<b) b =b-a;
@@ -12,7 +14,8 @@ int UCLN(int a,int b)
 }
 
 int BCNN(int a, int b){
-	return (a*b)/UCLN(a,b);
+	if (a==0 || b==0) return 0 ;
+	else return (a*b)/UCLN(a,b);
 }
 
 main(){
@@ -21,4 +24,6 @@ main(){
 	scanf("%d %d",&a ,&b);
 	printf("UCLN la:%d \n",UCLN(a,b));
 	printf("BCNN la:%d",BCNN(a,b));	
+	getch();
+    
 }

@@ -4,17 +4,22 @@
 
 int main(){
 	
-int i;
+int i,max;
 int chuhoa=0 ,chuthuong=0;
-char s[50];
-printf("nhap vao chuoi: ");
+printf("nhap vao so luong phan tu nhap max=  ");
+scanf("%d",&max);
+char s[max];
+printf("nhap chuoi : ");
+fflush(stdin);
 gets(s);
  for(i = 0; i < strlen(s); i++)
- {
+ {   
+    //kiem tra phan tu nhap la chu hoa
 	 if(s[i]>=65 && s[i]<=90){
       chuhoa = chuhoa +1;     
  
        }
+       //kiem tra phan tu nhap la chu thuong
 	 else if (s[i]>=97 && s[i]<=122){
       chuthuong = chuthuong +1; 
       }

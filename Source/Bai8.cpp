@@ -3,15 +3,19 @@
 #include<string.h>
 int main()
 {
-            char chuoi[100];
-            int i, n;
+	int i,n,max;
+            printf("nhap vao so luong phan tu nhap: ");
+            scanf("%d",&max);
+            char s[max];
             printf("nhap chuoi : ");
-           gets(chuoi);
-            n= strlen(chuoi)-1;
-            for(i=n; i>=0; i--)
+            fflush(stdin);
+            gets(s);
+            n = strlen(s)-1;
+            //dao chuoi
+            for(i=n;i>=0; i--)
             {
-            printf("%c", chuoi[i]);
+            printf("%c",s[i]);
             }
-            getch();
+             getch();
             return 0;
 }
